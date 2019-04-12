@@ -1,0 +1,8 @@
+<aura:component implements="lightning:availableForFlowScreens" access="global">
+    <lightning:workspaceAPI aura:id="workspace"/>
+
+    <aura:attribute name="disableTab" type="Boolean" />
+    
+    <aura:handler name="init" value="{!this }" action="{! c.disableCloseFocusedTab }"/>
+    
+</aura:component>
