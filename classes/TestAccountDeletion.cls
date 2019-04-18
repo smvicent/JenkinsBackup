@@ -4,6 +4,8 @@ private class TestAccountDeletion {
     @isTest static void TestDeleteAccountWithOneOpportunity() {
         // Test data setup
         // Create an account with an opportunity, and then try to delete it
+        TriggerSettings__c AccTriggerSettings = new TriggerSettings__c (Name = 'Account', TriggerDisabled__c = false);
+        insert AccTriggerSettings;
         Account acct = new Account(Name='Test Account');
         insert acct;
         Opportunity opp = new Opportunity(Name=acct.Name + ' Opportunity',
@@ -22,7 +24,7 @@ private class TestAccountDeletion {
         // so verify that we got back an error.
         System.assert(!result.isSuccess());
         System.assert(result.getErrors().size() > 0);
-        System.assertEquals('Cannot delete account with related opps',
+        System.assertEquals('No borres!',
                              result.getErrors()[0].getMessage());
     }
     

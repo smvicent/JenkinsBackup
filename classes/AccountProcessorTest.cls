@@ -2,6 +2,9 @@
 public class AccountProcessorTest {
 
     @isTest static void countContactTest() {
+
+        TriggerSettings__c AccTriggerSettings = new TriggerSettings__c (Name = 'Account', TriggerDisabled__c = false);
+        insert AccTriggerSettings;
     
         Account acc1 = new Account (Name = 'Account Test 001');
         insert acc1;

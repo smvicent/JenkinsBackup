@@ -7,6 +7,9 @@ public class AddPrimaryContactTest {
         List<Account> lstAcc = new List<Account>();
         Contact con = new Contact(FirstName = 'Test', LastName='Test');
         
+        TriggerSettings__c AccTriggerSettings = new TriggerSettings__c (Name = 'Account', TriggerDisabled__c = false);
+        insert AccTriggerSettings;
+        
         // 50 records BillingState NY
         // 50 records BillingStateCA
         for (Integer i = 0; i<50; ++i ) {

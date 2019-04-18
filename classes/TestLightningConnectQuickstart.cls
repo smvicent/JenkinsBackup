@@ -2,6 +2,8 @@
 public class TestLightningConnectQuickstart {
     public static testMethod void tester() {
         List<Account> accs = new List<Account>();
+        TriggerSettings__c AccTriggerSettings = new TriggerSettings__c (Name = 'Account', TriggerDisabled__c = false);
+        insert AccTriggerSettings;
         for (Integer i = 0; i < 10; i++) {
             accs.add(new Account(name = 'Test '+i));
         }

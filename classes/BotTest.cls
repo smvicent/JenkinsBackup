@@ -39,7 +39,11 @@ public class BotTest {
     }
 
     static testMethod void testFindAccount() {
-		Account a = new Account(Name='TestAccount');
+        
+        TriggerSettings__c AccTriggerSettings = new TriggerSettings__c (Name = 'Account', TriggerDisabled__c = false);
+        insert AccTriggerSettings;
+		
+        Account a = new Account(Name='TestAccount');
 		insert a;
         BotHandler handler = new HandlerFindAccount();
         BotResponse response = handler.handle('', new String[]{'Test'}, null, null, null);
@@ -88,6 +92,8 @@ public class BotTest {
     }
 
 	static testMethod void testTopOpportunities() {
+        TriggerSettings__c AccTriggerSettings = new TriggerSettings__c (Name = 'Account', TriggerDisabled__c = false);
+        insert AccTriggerSettings;
 		Account a = new Account(Name='TestAccount');
 		insert a;
 		Opportunity o = new Opportunity(Name='TestOpportunity', AccountId=a.id, StageName='Prospecting', CloseDate=System.today().addMonths(1));
@@ -122,6 +128,8 @@ public class BotTest {
     }
 
     static testMethod void testNext() {
+        TriggerSettings__c AccTriggerSettings = new TriggerSettings__c (Name = 'Account', TriggerDisabled__c = false);
+        insert AccTriggerSettings;
 		Account a = new Account(Name='TestAccount');
 		insert a;
 		Opportunity o = new Opportunity(Name='TestOpportunity', AccountId=a.id, StageName='Prospecting', CloseDate=System.today().addMonths(1));
@@ -134,6 +142,8 @@ public class BotTest {
     }
 
     static testMethod void testSOQL() {
+        TriggerSettings__c AccTriggerSettings = new TriggerSettings__c (Name = 'Account', TriggerDisabled__c = false);
+        insert AccTriggerSettings;
 		Account a = new Account(Name='TestAccount');
 		insert a;
         BotHandler handler = new HandlerSOQL();
