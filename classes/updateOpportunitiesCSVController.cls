@@ -1,5 +1,5 @@
 public class updateOpportunitiesCSVController {
-    
+    /*
 	public Blob csvFileBody{get;set;}
 	public String csvAsString{get;set;}
     public String Estado{get;set;}
@@ -50,5 +50,7 @@ public class updateOpportunitiesCSVController {
             ApexPages.Message errorMessage = new ApexPages.Message(ApexPages.severity.ERROR,'Error importando datos');
             ApexPages.addMessage(errorMessage);
         }  
-  }    
+        
+  }
+  */    
 }

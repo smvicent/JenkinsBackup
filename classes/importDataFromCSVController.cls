@@ -1,5 +1,5 @@
 public class importDataFromCSVController {
-    
+    /*
 	public Blob csvFileBody{get;set;}
 	public string csvAsString{get;set;}
 	public String[] csvFileLines{get;set;}
@@ -33,4 +33,5 @@ public class importDataFromCSVController {
             ApexPages.addMessage(errorMessage);
         }  
   }
+  */
 }
