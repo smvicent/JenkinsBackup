@@ -1,6 +1,6 @@
 public class Dog
 {
-    public Integer age;
+/*    public Integer age;
     public String name;
     private String gender;
     public String breed;
@@ -21,4 +21,5 @@ public class Dog
     public Integer countDogs() {
 		return   numDogs;     
     }
+    */
 }

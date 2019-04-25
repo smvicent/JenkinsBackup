@@ -1,4 +1,5 @@
 global class ConvertLeadAction {
+
   @InvocableMethod(label='Convert Leads')
   global static List<ConvertLeadActionResult> convertLeads(List<ConvertLeadActionRequest> requests) {
     List<ConvertLeadActionResult> results = new List<ConvertLeadActionResult>();
